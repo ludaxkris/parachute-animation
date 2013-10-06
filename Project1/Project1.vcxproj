@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Project4</ProjectName>
+    <ProjectGuid>{2E11E838-D073-4699-92DF-592872299192}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\Projects\Github\Projects\CSE 169\CSE 169 Project 4\Project4Parachute\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="animation.cpp" />
+    <ClCompile Include="bmpimage.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="channel.cpp" />
+    <ClCompile Include="channelEditor.cpp" />
+    <ClCompile Include="cloth.cpp" />
+    <ClCompile Include="core.cpp" />
+    <ClCompile Include="cube.cpp" />
+    <ClCompile Include="dof.cpp" />
+    <ClCompile Include="ground.cpp" />
+    <ClCompile Include="joint.cpp" />
+    <ClCompile Include="keyframe.cpp" />
+    <ClCompile Include="matrix34.cpp" />
+    <ClCompile Include="morph.cpp" />
+    <ClCompile Include="parachute.cpp" />
+    <ClCompile Include="particle.cpp" />
+    <ClCompile Include="particleSystem.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="pose.cpp" />
+    <ClCompile Include="rig.cpp" />
+    <ClCompile Include="skel.cpp" />
+    <ClCompile Include="skin.cpp" />
+    <ClCompile Include="springDamper.cpp" />
+    <ClCompile Include="tester.cpp" />
+    <ClCompile Include="token.cpp" />
+    <ClCompile Include="triangle.cpp" />
+    <ClCompile Include="vector3.cpp" />
+    <ClCompile Include="vertex.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="animation.h" />
+    <ClInclude Include="bmpimage.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="channel.h" />
+    <ClInclude Include="channelEditor.h" />
+    <ClInclude Include="cloth.h" />
+    <ClInclude Include="core.h" />
+    <ClInclude Include="cube.h" />
+    <ClInclude Include="dof.h" />
+    <ClInclude Include="ground.h" />
+    <ClInclude Include="joint.h" />
+    <ClInclude Include="keyframe.h" />
+    <ClInclude Include="matrix34.h" />
+    <ClInclude Include="morph.h" />
+    <ClInclude Include="parachute.h" />
+    <ClInclude Include="particle.h" />
+    <ClInclude Include="particleSystem.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="pose.h" />
+    <ClInclude Include="rig.h" />
+    <ClInclude Include="skel.h" />
+    <ClInclude Include="skin.h" />
+    <ClInclude Include="springDamper.h" />
+    <ClInclude Include="tester.h" />
+    <ClInclude Include="token.h" />
+    <ClInclude Include="triangle.h" />
+    <ClInclude Include="vector3.h" />
+    <ClInclude Include="vertex.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

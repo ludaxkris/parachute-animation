@@ -1,0 +1,11 @@
+////////////////////////////////////////
+// pose.cpp
+////////////////////////////////////////
+
+
+#include "core.h"
+#include "pose.h"
+
+void Pose::cleanPose() {
+	positions.clear();
+}
